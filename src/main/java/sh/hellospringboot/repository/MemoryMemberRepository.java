@@ -8,7 +8,7 @@ import java.util.*;
 /*
 이 class는 구현체!
  */
-@Repository
+//@Repository
 public class MemoryMemberRepository implements MemberRepository{
     private static Map<Long, Member> store = new HashMap<>();
     private static long sequence = 0L; // key 값 생성을 위한
