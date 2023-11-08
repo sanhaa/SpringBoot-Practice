@@ -3,6 +3,7 @@ package sh.hellospringboot;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import sh.hellospringboot.repository.JdbcMemberRepository;
+import sh.hellospringboot.repository.JdbcTemplateMemberRepository;
 import sh.hellospringboot.repository.MemberRepository;
 import sh.hellospringboot.repository.MemoryMemberRepository;
 import sh.hellospringboot.service.MemberService;
@@ -30,7 +31,8 @@ public class SpringConfig {
     @Bean
     public MemberRepository memberRepository(){
 //        return new MemoryMemberRepository();
-        return new JdbcMemberRepository(dataSource);
+//        return new JdbcMemberRepository(dataSource);
+        return new JdbcTemplateMemberRepository(dataSource);
     }
 
 }
